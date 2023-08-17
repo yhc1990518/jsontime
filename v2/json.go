@@ -1,10 +1,9 @@
 package v2
 
 import (
+	"fmt"
 	"time"
 	"unsafe"
-
-	"github.com/json-iterator/go"
 )
 
 // time format alias
@@ -69,6 +68,7 @@ var (
 
 func init() {
 	ConfigWithCustomTimeFormat.RegisterExtension(&CustomTimeExtension{})
+	fmt.Printf("for json init start.")
 }
 
 func AddTimeFormatAlias(alias, format string) {
